@@ -1,6 +1,8 @@
 const div = document.querySelector("div#table");
+const expression = document.querySelector("input#expression");
 
 addNumbers();
+initLoop();
 
 function addNumbers() {
     for (let i = 1; i <= 100; i++) {
@@ -17,4 +19,12 @@ function addNumbers() {
         
         div.appendChild(nDiv);
     }
+}
+
+function initLoop() {
+    window.requestAnimationFrame(loop);
+}
+
+function loop() {
+    window.requestAnimationFrame(loop);
 }
