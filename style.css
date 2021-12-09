@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+    text-align: center;
+}
+
+input {
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 40%;
+    
+    border: 1px solid black;
+    
+    font-size: 16px;
+    font-family: "Consolas";
+        
+    transition: box-shadow 0.5s;
+}
+
+input:focus {
+    outline: none;
+    
+    box-shadow: 2px 2px 5px rgba(0,0,0,50%);
+}
+
+div#table {
+    width: 412px; /* 402, 400 */
+    height: 411px;
+    
+    margin: 20px 50%;
+    transform: translateX(-50%);
+    
+    padding-top: 5px;
+    
+    border: 1px solid black;
+}
