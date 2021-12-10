@@ -1,5 +1,7 @@
 const div = document.querySelector("div#table");
-const expression = document.querySelector("input#expression");
+const op1 = document.querySelector("input#op1");
+const op2 = document.querySelector("input#op2");
+const operation = document.querySelector("select#operation");
 
 addNumbers();
 initLoop();
@@ -27,7 +29,4 @@ function initLoop() {
 
 function loop() {
     window.requestAnimationFrame(loop);
-}
-function parseExpression(expression, i) {
-    
 }
