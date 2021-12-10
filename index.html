@@ -14,9 +14,24 @@
         <h3>by Boot</h3>
         
         <input type="text"
-               id="expression"
-               name="expression"
-               placeholder="Expression..."
+               id="op1"
+               name="op1"
+               placeholder="Operator 1"
+               spellcheck="false">
+        
+        <select name="equals" id="equals">
+            <option value="equals">==</option>
+            <option value="not-equals">!=</option>
+            <option value="bigger">></option>
+            <option value="lower"><</option>
+            <option value="bigger-equals">>=</option>
+            <option value="lower-equals"><=</option>
+        </select>
+        
+        <input type="text"
+               id="op2"
+               name="op2"
+               placeholder="Operator 2"
                spellcheck="false">
         
         <div id="table"></div>

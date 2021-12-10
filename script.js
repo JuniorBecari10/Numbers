@@ -28,3 +28,6 @@ function initLoop() {
 function loop() {
     window.requestAnimationFrame(loop);
 }
+function parseExpression(expression, i) {
+    
+}
