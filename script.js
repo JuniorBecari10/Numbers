@@ -1,15 +1,17 @@
 const div = document.querySelector("div#table");
-const op1 = document.querySelector("input#op1");
-const op2 = document.querySelector("input#op2");
-const operation = document.querySelector("select#operation");
+const expression = document.querySelector("input#expression");
+
 const resetTableBtn = document.getElementById("reset-table");
-const resetBoxesBtn = document.getElementById("reset-boxes");
+const resetExpBtn = document.getElementById("reset-exp");
+
+const goBtn = document.getElementById("go");
 
 addNumbers();
-initLoop();
 
 resetTableBtn.onclick = resetElements;
-resetBoxesBtn.onclick = resetBoxes;
+resetExpBtn.onclick = resetExp;
+
+goBtn.onclick = parse;
 
 function addNumbers() {
     for (let i = 1; i <= 100; i++) {
@@ -29,9 +31,8 @@ function addNumbers() {
     }
 }
 
-function resetBoxes() {
-    op1.value = "";
-    op2.value = "";
+function resetExp() {
+    expression.value = "";
 }
 
 function resetElements() {
@@ -46,54 +47,12 @@ function resetElements() {
 
 function parse() {
     try {
-        for (let i = 0; i < 100; i++) {
-            let ex1 = eval(op1.value);
-            let ex2 = eval(op2.value);
-            
+        for (let i = 1; i <= 100; i++) {
             let element = document.getElementById("nDiv-" + i);
-            let operation = document.getElementById("operation");
+            let exp = eval(expression.value);
             
-            switch (operation.value) {
-                case "equals":
-                    if (ex1 === ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-                
-                case "not-equals":
-                    if (ex1 !== ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-                
-                case "bigger":
-                    if (ex1 > ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-                
-                case "lower":
-                    if (ex1 < ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-                
-                case "bigger-equals":
-                    if (ex1 >= ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-                
-                case "lower-equals":
-                    if (ex1 <= ex2)
-                        element.style.backgroundColor = "#aaa";
-                break;
-            }
+            if (exp) element.style.backgroundColor = "#aaa";
+            
         }
     } catch (e) {} // pra thread n cair
-}
-
-function initLoop() {
-    window.requestAnimationFrame(loop);
-}
-
-function loop() {
-    parse();
-    
-    window.requestAnimationFrame(loop);
 }

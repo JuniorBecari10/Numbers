@@ -10,34 +10,22 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Numbers</h1>
-        <h3>by Boot</h3>
+        <header>
+            <h1>Numbers</h1>
+        </header>
         
         <input type="text"
-               id="op1"
-               name="op1"
-               placeholder="Operator 1"
+               id="expression"
+               name="expression"
+               placeholder="Expression"
                spellcheck="false">
         
-        <select name="operation" id="operation">
-            <option value="equals">==</option>
-            <option value="not-equals">!=</option>
-            <option value="bigger">></option>
-            <option value="lower"><</option>
-            <option value="bigger-equals">>=</option>
-            <option value="lower-equals"><=</option>
-        </select>
-        
-        <input type="text"
-               id="op2"
-               name="op2"
-               placeholder="Operator 2"
-               spellcheck="false">
+        <button id="go">Go!</button>
         
         <div id="table"></div>
         
         <button id="reset-table">Reset Table</button>
-        <button id="reset-boxes">Reset Boxes</button>
+        <button id="reset-exp">Reset Expression</button>
         
         <script src="script.js"></script>
     </body>
